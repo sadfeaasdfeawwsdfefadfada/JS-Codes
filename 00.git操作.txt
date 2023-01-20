@@ -1,3 +1,4 @@
 查看版本信息 git log
 本地回滚 git reset --hard 版本号
 github回滚 git push -f
+github用户名 js20230120@163.com
