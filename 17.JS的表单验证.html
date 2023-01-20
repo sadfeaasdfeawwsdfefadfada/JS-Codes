@@ -1,0 +1,81 @@
+<html>
+    <body >
+        <form  name="haha" method="get" onsubmit="return valid('haha')">
+            <input type="text" id="myText" name="ss">
+            <input type="checkbox" id="myCheckbox" value="man" name="fff"><br>
+            <input type="submit" value="递交"> 这是一个input 按钮递交<br>
+        </form>
+        <form  name="haha1" onsubmit="return valid('haha1')">
+            <input type="text" id="myText" name="ss">
+            <input type="checkbox" id="myCheckbox" value="man" name="fff"><br>
+            <button type="submit" formmethod="get"> 这是一个button 按钮递交</button><br>
+        </form>
+        <form name="password" method="get" onsubmit="return validpassword()">
+            <input type="password" name="mPassword"><br>
+            <input type="submit" value="验证密码有效性">
+        </form>
+        <form name="radio" method="get" onsubmit="return validradio()">
+            <input type="radio" name="mRadio" value="man">男<br>
+            <input type="radio" name="mRadio" value="woman">女<br>
+            <input type="submit" value="验证单选框效性">
+        </form>
+        <form name="checkbox" method="get" onsubmit="return validcheckbox()">
+            <input type="checkbox" name="mCheckbox" value="vba">VBA<br>
+            <input type="checkbox" name="mCheckbox" value="linux">Linux<br>
+            <input type="checkbox" name="mCheckbox" value="javascript">JavaScript<br>
+            <input type="checkbox" name="mCheckbox" value="c">C<br>
+            <input type="submit" value="验证复选框有效性">
+        </form>
+        <form name="select" method="get" onsubmit="return validselect()">
+            <select name="mySelect">
+                <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option value="opel">opel</option>
+                    <option value="audi">audi</option>
+                </optgroup>
+            </select><br>
+            <input type="submit" value="验证下拉菜单有效性">
+        </form>
+        <script>
+            function valid(x){
+                var x;
+                x=document.forms[x]['ss'].value;
+                if (x.length>5==false){
+                    return false;
+                }
+            }
+            function validpassword(){
+                var pwd;
+                pwd=document.forms['password']['mPassword'].value;
+                if (pwd.length>5==false){
+                    return false;
+                }
+            }
+            function validradio(){
+                var rd
+                rd=document.forms['radio']['mRadio'].value;
+                if (rd=='man'==false){
+                    return false;
+                }
+            }
+            function validcheckbox(){
+                var cbx
+                cbx=document.forms['checkbox']['mCheckbox'][3].checked;
+                if(cbx==true){
+                    return false;
+                }
+            }
+            function validselect(){
+                var slt
+                slt=document.forms['select']['mySelect'].value;
+                if(slt=='opel'){
+                    return false;
+                }
+            }
+        </script>   
+
+    </body>
+</html>

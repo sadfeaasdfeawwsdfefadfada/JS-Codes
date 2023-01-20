@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var a;
+            window.alert('未赋值时，a变量的类型是：'+typeof(a));
+            a=2.21;
+            window.alert('赋数字时，a变量的类型是：'+typeof(a)+"构造函数是"+a.constructor);
+            a='hello world';
+            window.alert('赋字符串时，a变量的类型是：'+typeof(a)+"构造函数是"+a.constructor);
+            a=[12,32,'aas',3.21];
+            window.alert('赋数组时，a变量的类型是：'+typeof(a)+"构造函数是"+a.constructor);
+            a={firstName:'Tom',lastName:'Peter',age:34};
+            window.alert('赋键值对时，a变量的类型是：'+typeof(a)+"构造函数是"+a.constructor);
+            a=true;
+            window.alert('赋布尔值时，a变量的类型是：'+typeof(a)+"构造函数是"+a.constructor);
+        </script>
+
+    </body>
+</html>

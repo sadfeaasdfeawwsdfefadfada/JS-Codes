@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            <!--let在循环体内累加，在全局变量不受影响
+                let的变量的作用域是<script>的环境，不是html windows的全局变量
+                -->
+            let a;
+            a=100;
+            for(let a=0;a<10;a++){
+                this.alert(a);
+            }
+            this.alert(this.a);
+        </script>           
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            try{   
+                addlert("测试异常处理.");
+            }
+            catch(err){
+                txt='本页有一个错误。\n\n';
+                txt+='错误描述: '+ err.message+'\n\n';
+                txt+='点击确定继续。 \n\n';
+                window.alert(txt);
+            }
+        </script>
+    </body>
+</html>

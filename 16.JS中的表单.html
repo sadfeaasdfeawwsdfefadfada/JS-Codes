@@ -1,0 +1,69 @@
+<html>
+    <body>
+        <form name="mForm" >
+            <fieldset >
+                <legend>带边框的表单</legend>
+                <!--文本输入框-->
+                这是一个文本输入框 <input type="text" id="myTxt" maxlength="9" required size="10" name="myTxt"><br>
+                <!--密码输入框-->
+                这是一个密码输入框 <input type="password" id="myPassword" size="20" name="myPassword"><br>
+                <!--单选按钮-->
+                这是一组单选框 <br>
+                <input type="radio" id="myRadio1" name="Sex" value="男" checked="checked" >男<br>
+                <input type="radio" id="myRadio2" name="Sex" value="女" >女<br>
+                <!--复选框-->
+                这是一组复选框 <br>
+                <input type="checkbox" id="myCheckbox1" name="爱好" value="Music">音乐<br>
+                <input type="checkbox" id="myCheckbox2" name="爱好" value="Game" checked="checked">游戏<br>
+                <!--递交按钮-->
+                这是一个递交input按钮 <input type="submit" value="提交" onclick="myFunction()" formmethod="get"><br>
+                <!--禁止使用这个input标签-->
+                禁止使用这个input标签 <input type="text" value="禁止输入数据" id="myDisable" disabled="true" name="myDisable"><br>
+                <!--有预定义值的Input标签-->
+                带有预定义值的文本框<input type="text" id="mList" list="browsers" name="mList">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist><br>
+                <!--数字输入框-->
+                这是一个数字输入框 <input type="number" max="10" min="0" id="myNumber" name="myNumber"><br>
+                <!--文件选择-->
+                这是一个文件选择 <input type="file" id="myFile" multiple name="myFile"><br>
+                <!--正则验证输入内容-->
+                这是一个正则验证 <input type="text" id="myPattern" pattern="[a-zA-Z]{5,}" title="至少5个字符" name="myPattern"><br>
+                <!--place holder-->
+                这是一个包含占位符的文本框 <input type="text" id="myPlaceholder" placeholder="一个placeholder值" name="myPlaceholder"><br>
+                <!--一个只读文本框-->
+                这是一个只读文本框 <input type="text" id="myReadonly" readonly value="我是只读文本框" name="myReadonly"><br>
+                <!--一个图片-->
+                这是一个点击图片提交功能 <input type="image" src="..//.vscode/submit.gif"  width="40" height="40" onclick="myFunction()" id="myFigure" name="myFigure" formmethod="get"><br>
+                <!--下拉选项-->
+                这是一个下拉选项框 
+                <select name="mySelect">
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="opel">opel</option>
+                        <option value="audi">audi</option>
+                    </optgroup>
+                </select><br>
+                <!--f范围选项框-->
+                这是一个范围选项框<input type="range" id="myRange" value="65" name="myRange"><br>
+                <!--递交按钮-->
+                这是一个递交按钮 <button type="submit" formmethod="post">点击</button>
+            </fieldset>
+        </form>
+    <script>
+        function myFunction(){
+            var a;
+            window.alert(document.getElementById("myTxt").value);
+            a=document.getElementById("myTxt");
+        }
+    </script>
+    </body>
+</html>

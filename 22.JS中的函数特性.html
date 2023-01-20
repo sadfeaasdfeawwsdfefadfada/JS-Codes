@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <button type="button" onclick="myTest(1,123,500,115,44,88)">点击</button><br><!--直接调用函数-->
+        <button type="button" onclick="person.playgame(1,123,500,115,44,88)">点击</button><br><!--作为一个对象的方法调用-->
+        <button type="button" onclick="personAge.addAge()">点击</button><br><!--闭包-->
+        <script>
+            //使用arguments隐式传递，读取函数中的值
+            function myTest(){
+                this.alert(arguments[2]);
+            }
+        </script>
+        <script>
+            //函数作为对象的方法使用
+            var person ={
+                firstName:'John',
+                lastName:'Peter',
+                playgame:function(){
+                    window.alert(arguments[2]);
+                }
+            }
+        </script>
+        <script>//我的闭包，实现了值的内部传递
+            var personAge={
+                age:0,
+                addAge:function(){
+                    this.age+=1;
+                    window.alert(this.age);
+                }
+            }
+            var bb = new personAge();
+        </script>
+    </body>
+</html>

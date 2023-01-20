@@ -1,0 +1,82 @@
+<html>
+    <body>
+        <script>
+            //JS中类的基本结构
+            /*
+            class Person{
+                constructor(firstName,secondName){
+                    this.firstName=firstName;
+                    this.secondName=secondName;
+                }
+            }
+            var firsthuman = new Person('Tom','Peter');
+            var secondhuman=new Person('Jack','Tim');
+            this.alert(firsthuman.firstName+' '+firsthuman.secondName);
+            this.alert(secondhuman.firstName+' '+secondhuman.secondName);
+            */
+           /*
+           //JS中类的继承
+           class Para{
+            constructor(color,voice,feel){
+                this.color=color;
+                this.voice=voice;
+                this.feel=feel;
+                this.value=10000;
+            }
+            fly(){}
+            run(){}
+            play(what){
+                window.alert(what);
+            }
+           }
+           class Human extends Para{
+           }
+           var person=new Human('yellow','bird','good');
+           this.alert(person.color+' '+person.voice+' '+person.feel);
+           person.play('blues');
+           */
+          //使用super方法继承父类的属性
+          /*
+           class Robert1{
+            constructor(model,battery){
+                this.model=model;
+                this.battery=battery;
+            }
+            skill_1(){
+                window.alert('计算');
+            }
+           }
+           class Robert2 extends Robert1{
+            constructor(model,battery,material){
+                super(model,battery);
+                this.material=material;
+            }
+
+            skill_1(){
+                window.alert('云计算');
+            }
+           }
+           var rb= new Robert2('xx_01','sun_energe','eletric');
+           this.alert(rb.model+' '+rb.battery+' '+rb.material);
+           rb.skill_1();
+           */
+          //set与get的用法
+          class Hello{
+            #what='';
+            constructor(what){
+                this.#what=what;
+            }
+            get say_what(){
+                return this.#what;
+            }
+            set say_what(what){
+                this.#what=what;
+            }
+          }
+          var test_let_set =new Hello('world');
+          test_let_set.say_what='haha';
+          this.alert(test_let_set.say_what);
+          document.getElementById('aa').style.fontSize
+        </script>
+    </body>
+</html>

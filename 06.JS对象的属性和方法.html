@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            var person={
+                firstName:"John",
+                lastName:"Doe",
+                age:38,
+                skill_1: function playGames()
+                {
+                    return "play video games";
+                }
+            };
+        </script>
+        <p id="demo1">这是一个段落1</p>
+        <button type="button" onclick="window.alert(person.skill_1())">调用对方的属性与方法</button>
+    </body>
+</html>

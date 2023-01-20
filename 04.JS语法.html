@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>JavaScript语法练习</title>
+        <script>
+            var a=10,
+            b=20.1928,
+            c=127e5,
+            d='hello world',
+            e="hello world",
+            f=a+b,
+            g=a*b,
+            h=[40,100,1,5,25,10.23],
+            i=[40,100,1,5,'temp',10.23],
+            j={firstName:'John',lastName:'Peter',age:37,eyeColor:'Black'};
+
+            function k()
+            {
+                return a*b;
+            }
+            function 变量(x,y)
+            {
+                if (x==1)
+                {
+                    document.getElementById(y).innerHTML=a;
+                }
+                else if (x==2)
+                {
+                    document.getElementById(y).innerHTML=b;
+                }
+                else if (x==3)
+                {
+                    document.getElementById(y).innerHTML=c;
+                }
+                else if (x==4)
+                {
+                    document.getElementById(y).innerHTML=d;
+                }
+                else if (x==5)
+                {
+                    document.getElementById(y).innerHTML=e;
+                }
+                else if (x==6)
+                {
+                    document.getElementById(y).innerHTML=f;
+                }
+                else if (x==7)
+                {
+                    document.getElementById(y).innerHTML=g;
+                }
+                else if (x==8)
+                {
+                    document.getElementById(y).innerHTML=h;
+                }
+                else if (x==9)
+                {
+                    document.getElementById(y).innerHTML=i;
+                }
+                else if (x==10)
+                {
+                    document.getElementById(y).innerHTML=j;
+                }
+                else if (x==11)
+                {
+                    document.getElementById(y).innerHTML=k();
+                }
+                else if (x==12)
+                {
+                    document.getElementById(y).innerHTML=i[0];
+                }
+                else if (x==13)
+                {
+                    document.getElementById(y).innerHTML=j.age;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p id="a1"> 一个段落1</p>
+        <button type="button" onclick="变量(1,'a1')">一个整数变量</button>
+        <p id="a2"> 一个段落2</p>
+        <button type="button" onclick="变量(2,'a2')">一个小数变量</button>
+        <p id="a3"> 一个段落3</p>
+        <button type="button" onclick="变量(3,'a3')">一个科学计数变量</button>
+        <p id="a4"> 一个段落4</p>
+        <button type="button" onclick="变量(4,'a4')">一个单引号字符串变量</button>
+        <p id="a5"> 一个段落5</p>
+        <button type="button" onclick="变量(5,'a5')">一个双引号字符串变量</button>
+        <p id="a6"> 一个段落6</p>
+        <button type="button" onclick="变量(6,'a6')">一个加法变量</button>
+        <p id="a7"> 一个段落7</p>
+        <button type="button" onclick="变量(7,'a7')">一个乘法变量</button>
+        <p id="a8"> 一个段落8</p>
+        <button type="button" onclick="变量(8,'a8')">一个数字数组变量</button>
+        <p id="a9"> 一个段落9</p>
+        <button type="button" onclick="变量(9,'a9')">一个混合类型数组变量</button>
+        <p id="a10"> 一个段落10</p>
+        <button type="button" onclick="变量(10,'a10')">一个键值对变量</button>
+        <p id="a11"> 一个段落11</p>
+        <button type="button" onclick="变量(11,'a11')">一个函数变量</button>
+        <p id="a12"> 一个段落12</p>
+        <button type="button" onclick="变量(12,'a12')">读取数组中的值</button>
+        <p id="a13"> 一个段落13</p>
+        <button type="button" onclick="变量(13,'a13')">从键值对中寻址</button>
+    </body>
+</html>

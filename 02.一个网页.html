@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            a1="as";
+            a2="se";
+            a3="fa";
+            a4="ft";
+        </script>
+        <script>
+            function myFunctioninhead()
+            {
+                document.getElementById("demo").innerHTML="我的第一个JavaScript函数_header"
+            }
+        </script>
+        <title>一个用于练习的HTML文档!</title>
+    </head>
+    <body>
+        <script>
+            function myFunctioninbody()
+            {
+                document.getElementById("demo2").innerHTML="我的第一个JavaScript函数_body"
+            }
+            function getChar()
+            {
+                var a = document.getElementById("demo8").innerHTML;
+                //a = a[1];
+                a=a.substring(1,3);
+                return a; 
+            }
+            function sepcialChar()
+            {
+                var a = "\"这是个双引号字符";
+                a=a+"\n";
+                a=a+"\'这是个单引号字符";
+                a=a+"\n";
+                a=a+"\\这是个反斜杠字符";
+                a=a+"\n";
+                a=a+"\n这是个换行字符";
+                a=a+"\n";
+                a=a+"\r这是个回车字符";
+                a=a+"\n";
+                a=a+"\t这是个tab(制表符)字符";
+                a=a+"\n";
+                a=a+"\b这是个退格字符";
+                a=a+"\n";
+                a=a+"\f这是个换页字符";
+                return a; 
+            }
+        </script>
+        <h1>我的 Web 页面</h1>
+        <p id="demo">一个段落1</p>
+        <button type="button" onclick="myFunctioninhead()">这是head中的script</button>
+        <p id="demo2">一个段落2</p>
+        <button type="button" onclick="myFunctioninbody()">这是body中的script</button>
+        <p id="demo3">一个段落3</p>
+        <button type="button" onclick="myExternalFunction('demo3')">
+            <script src="03.一个外部JS.js"></script>这是一个外部script
+        </button>
+        <p>一个段落4</p>
+        <button type="button" onclick="window.alert(2+9)">这是一个alter输出</button>
+        <p>一个段落5</p>
+        <button type="button" onclick="myWriteFunction()">
+            <script>
+                function myWriteFunction()
+                {
+                    document.write("<html><head><title>这是一个测试用HTML！！</title></head><h1>这是一个标题</h1><p>这是一个段落</p></html>")
+                }
+            </script>
+            这是一个write输出
+        </button>
+        <p>一个段落6</p>
+        <button type="button" onclick="console.log('在console输出值...'+(aa+bb))">这是一个console输出</button>
+        <script>
+            aa=1
+            bb=2
+        </script>
+        <p onclick="window.alert('haha')">点击这个段落7</p>
+        <p id="demo8">一个段落8</p>
+        <button type="button" onclick="window.alert(getChar())">如字符串中第二个值</button>
+        <p id="demo9">一个段落9</p>
+        <button type="button" onclick="window.alert(sepcialChar())">特殊字符</button>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <script>
+            var b;
+            b=1002;
+            this.alert('haha'); //这个this指向了window对象
+            function try1(){
+                var b;
+                b=100;
+                return this.b;//函数中的this返回了window对象
+            }
+            var person;
+            person={
+                firstName:"John",
+                lastName:'Doe',
+                age:34,
+                fullName:function(){
+                    return this.firstName+" "+this.lastName;//this指向了person对象
+                }
+            };
+            var play;
+            play={
+                p1:'video games',
+                p2:'music',
+                playwhat:function(){
+                    return this.p1+" "+this.p2;
+                }
+            };
+            var otherplay;
+            otherplay={
+                p1: 'develop',
+                p2: 'sport',
+                p3: 'game'
+            }
+        </script>
+        <button type="button" onclick="window.alert(try1())">点击</button>
+        <button type="button" onclick="window.alert(play.playwhat.call(otherplay))">点击</button> <!--通过call,apply将this绑定到另一个对象-->
+        <button type="button" onclick="window.alert(play.playwhat.apply(otherplay))">点击</button>
+    </body>
+</html>

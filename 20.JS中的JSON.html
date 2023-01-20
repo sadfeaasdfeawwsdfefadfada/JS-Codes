@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            //字符串转JS对象
+            let test;
+            test='{"www_test":['+
+                '{"firstName":"John","lastName":"Well","age":37,"salary":123921.1232},'+
+                '{"firstName":"Tom","lastName":"Best","age":27,"salary":102311.1232},'+
+                '{"firstName":"Hanson","lastName":"Great","age":36,"salary":12921.1232} ],'+
+                '"www_test1":['+
+                '{"firstName":"John","lastName":"Well","age":37,"salary":123921.1232},'+
+                '{"firstName":"Tom","lastName":"Best","age":27,"salary":102311.1232},'+
+                '{"firstName":"Hanson","lastName":"Great","age":36,"salary":12921.1232} ]}';
+            test=JSON.parse(test);
+            test=JSON.stringify(test);
+        </script>
+    </body>
+</html>
