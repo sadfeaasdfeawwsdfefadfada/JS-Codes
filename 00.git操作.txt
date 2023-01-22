@@ -26,3 +26,5 @@ git basic setting
     9.1 git config --global pull.rebase=true
     9.2 git pull [repositories name] master
 10.git push in the future...
+
+https://www.runoob.com/js/js-chrome.html
