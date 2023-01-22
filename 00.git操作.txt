@@ -28,3 +28,4 @@ git basic setting
 10.git push in the future...
 
 https://www.runoob.com/js/js-chrome.html
+可以输入中文了
