@@ -1,0 +1,36 @@
+<html>
+    <body id="bd">
+        <div id="div1">
+            <p id="p1">段落1</p>
+            <p id="p2">段落2</p>
+            <p id="p3">段落3</p>
+            <p id="p4">段落4</p>
+        </div>
+        <div id="div2">
+            <p id="p5">段落5</p>
+            <p id="p6">段落6</p>
+        </div>
+        <script>
+            var p1 =document.getElementById("p1");
+            var p2 =document.getElementById("p2");
+            var p3 =document.getElementById("p3");
+            var p4 =document.getElementById("p4");
+            var p5 =document.getElementById("p5");
+            var p6 =document.getElementById("p6");
+            var dv1=document.getElementById("div1");
+            var dv2=document.getElementById("div2");
+            var ct=document.getElementById("bd");
+            //改变元素的位置
+            //1.将元素放入中间位置（将P4放到P3前面）
+            p1.before(p2);
+             //2.将元素移动到开头(同级)
+            p2.before(p4);
+             //3.将元素移动到末尾(同级)
+            p3.after(p1); 
+            p6.before(p2);
+            //4.将元素移动到其他位置(另外一个容器)
+            dv1.before(p6);
+            dv2.after(p4);
+        </script>
+    </body>
+</html>
