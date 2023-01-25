@@ -4,7 +4,7 @@ github回滚 git push -f
 github用户名 js20230120@163.com
 
 git basic setting
-1.set up git
+1.install git
 2.set username and email
     2.1 git config --global user.name "var"
     2.2 git config --global user.email "var"
