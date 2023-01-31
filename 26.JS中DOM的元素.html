@@ -1,12 +1,22 @@
 <html>
     <body id="bd">
         <div id="div1">
+            <ol id="ol1">
+                <li id="l1">Coffee</li>
+                <li id="l2">Tea</li>
+                <li id="l3">Milk</li>
+            </ol>
             <p id="p1">段落1</p>
             <p id="p2">段落2</p>
             <p id="p3">段落3</p>
             <p id="p4">段落4</p>
         </div>
         <div id="div2">
+            <ol id="ol2">
+                <li id="l4">dog</li>
+                <li id="l5">cat</li>
+                <li id="l6">fish</li>
+            </ol>
             <p id="p5">段落5</p>
             <p id="p6">段落6</p>
         </div>
@@ -21,6 +31,7 @@
             var dv2=document.getElementById("div2");
             var ct=document.getElementById("bd");
             //改变元素的位置
+            /*
             //1.将元素放入中间位置（将P4放到P3前面）
             p1.before(p2);
              //2.将元素移动到开头(同级)
@@ -31,6 +42,26 @@
             //4.将元素移动到其他位置(另外一个容器)
             dv1.before(p6);
             dv2.after(p4);
+            //5.将列表2放到列表1前面
+            ol1.before(ol2);
+            //6.将列表中的一列放到另外一个列表中
+            l5.after(l2);
+            */
+            //创建新元素
+            //使用insertAdjacentHTML方法
+            //参数"beforeBegin"表示在元素前面插入
+            //参数"afterBegin"表示在元素第一个子元素插入
+            //参数"beforeEnd"表示在元素后面插入一个元素
+            //在段落1后面插入一个新段落
+            var x="<p>这是新插入段落1</p>";
+            var y="<p>这是新插入段落2</p>";
+            var z="<li>duck</li>"
+            p1.insertAdjacentHTML("beforeend",x); 
+            //在段落5前面插入一个新段落
+            p5.insertAdjacentHTML("beforebegin",y); 
+            //在列表中插入一项
+            ol2.insertAdjacentHTML("afterBegin",z);
+
         </script>
     </body>
 </html>
