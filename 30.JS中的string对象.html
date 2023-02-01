@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>
+        //字符串可以用单引号或双引号
+        var carname="volvo XC60";
+        var carname='volvo XC60';
+        //可以使用位置(索引)访问字符串中任何字符
+        window.alert(carname[2]); 
+        //可以在字符串内加引号
+        var answer="He is called 'Johnny'";
+        window.alert(answer);
+        var answer='He is called "Johnny"';
+        window.alert(answer);
+        //可以使用转义符
+        var answer="He is called \"Johnny\"";
+        window.alert(answer);
+        //length计算字符长度
+        window.alert(answer.length);
+        //在字符串中查找字符串
+        window.alert(answer.indexOf('John')); //从开始位置查找
+        window.alert(answer.lastIndexOf('John'));//从末尾位置查找
+        //替换字符串
+        window.alert(answer.replace('Johnny','Tom'));
+        //字符串大小写转换
+        //转小写
+        window.alert(answer.toLowerCase());
+        //转大写
+        window.alert(answer.toUpperCase());
+        //字符串转数组
+        window.alert(answer.split(" ")[1]);
+        //特殊字符
+        /*
+        \' 单引号
+        \" 双引号
+        \\ 斜杠
+        \n 换行
+        \r 回车
+        \t tab
+        \b 空格
+        */
+        </script>
+    </body>
+</html>
