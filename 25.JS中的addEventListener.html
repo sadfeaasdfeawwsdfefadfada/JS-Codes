@@ -4,6 +4,7 @@
         <p id="mPara1"></p><br>
         <button type="button" id="mBtn">点击</button><br>
         <input type="text" id="mTxt">
+        <button type="button" id="btn1">点击我</button>
         <script>
             var mBtn=document.getElementById("mBtn");
             var mInput=document.getElementById("mTxt");
@@ -13,11 +14,16 @@
             mBtn.addEventListener("mousedown",myTest1);
             mBtn.addEventListener("mouseup",myTest1);
             mInput.addEventListener("change",myTest1);
+            //添加参数的函数
+            btn1.addEventListener("click",function(){myFirst("haha");});
             function myTest(){
                 document.getElementById("mPara").innerHTML=Math.random();
             }
             function myTest1(){
                 document.getElementById("mPara1").innerHTML=Math.random();
+            }
+            function myFirst(x){
+                window.alert(x);
             }
         </script>
     </body>
