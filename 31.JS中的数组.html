@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            //数组中可以存放各种类型的数据，包括方法...
+            var myArr=new Array();
+            myArr[0]='Tom';
+            myArr[1]=123;
+            myArr[2]=12.39;
+            myArr[3]=function (x,y){
+                window.alert(x+y);
+            }
+            /*
+            myArr[3]('hello ','world');
+            //数组的长度
+            window.alert(myArr.length);
+            */
+            //数组的索引值
+            window.alert(myArr.indexOf(12.39));
+        </script>
+    </body>
+</html>
