@@ -1,7 +1,11 @@
 <html>
     <body>
         <p id="p"></p>
+        <p id="time"></p><br>
+        <button type="button" id="btn1">启动时钟</button><br><br>
+        <button type="button" id="btn2">终止</button><br>
         <script>
+            /*
             txt="<p>浏览器代号： "+ navigator.appCodeName +"</p>";
             txt+="<p>浏览器名称： "+navigator.appName+"</p>";
             txt+="<p>浏览器版本： "+navigator.appVersion+"</p>";
@@ -10,6 +14,30 @@
             txt+="<p>用户代理: "+navigator.userAgent+"</p>";
             txt+="<p>用户代理语言: "+navigator.language+"</p>"
             document.getElementById("p").innerHTML=txt;
+            */
+           
+            var btn1=document.getElementById('btn1');
+            var btn2=document.getElementById('btn2');
+            var p1=document.getElementById('time');
+            var myArr= new Array();
+            //将setInterval装入数组
+            myArr[0]= function(){
+                window.setInterval(function(){showtime()},1000)
+            }
+            btn1.addEventListener("click",myArr[0]);
+            btn2.addEventListener("click",function(){stoptime()});
+            function showtime(){
+                if(btn1.innerHTML=='启动时钟'){
+                    btn1.innerHTML='停止时钟';
+                }
+                var d=new Date();
+                var t=d.toLocaleTimeString();
+                p1.innerHTML=t;
+            }
+            //停止setInterval
+            function stoptime(){
+                window.clearInterval(myArr[0]);
+            }
         </script>
     </body>
 </html>
