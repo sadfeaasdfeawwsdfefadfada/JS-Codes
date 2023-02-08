@@ -20,6 +20,8 @@ git basic setting
     7.3 create a readme file in this folder
     7.4 git add [file]
     7.5 git commit -c "var"
+    7.6 add .gitignore
+        7.6.1 add ignore file..
 8.connect remote repositories
     8.1 git remote add [repositories name] [ssh address]
 9.pull files
