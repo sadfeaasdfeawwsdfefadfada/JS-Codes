@@ -3,7 +3,7 @@
 github回滚 git push -f
 github用户名 js20230120@163.com
 查看user name:  git config user.name
-查看user email:  git config user.email
+查看user email:  git config user.email..
 
 
 git basic setting
