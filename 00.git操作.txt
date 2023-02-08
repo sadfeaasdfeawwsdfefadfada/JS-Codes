@@ -2,6 +2,9 @@
 本地回滚 git reset --hard 版本号
 github回滚 git push -f
 github用户名 js20230120@163.com
+查看user name:  git config user.name
+查看user email:  git config user.email
+
 
 git basic setting
 1.install git
@@ -11,7 +14,8 @@ git basic setting
 3.generate key
     ssh-keygen -t rsa -C "test"
 4.copy pub key
-    ~/.ssh/id_rsa.pub
+    ~/.ssh/id_rsa.pub(linux)
+    C:\Users\houx14\.ssh\id_rsa.pub(windows)
 5.generate ssh on github
 6.get repositories ssh code on github
 7.generate a local repositories 
